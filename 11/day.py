@@ -41,11 +41,7 @@ def step(inp_clone):
 
 def part1(inp):
     inp_clone = [list(x) for x in inp]
-    s = 0
-    for _ in range(100):
-        s += step(inp_clone)
-
-    return s
+    return sum(step(inp_clone) for _ in range(100))
 
 
 def part2(inp):
